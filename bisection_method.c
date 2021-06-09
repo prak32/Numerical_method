@@ -11,7 +11,7 @@ int main()
     float epsilon = 0.0001;
     float counter = 0;
     float err;
-    int itr = 0;
+    int itr = 1;
 	
 	loop1:
     printf("Enter Xa:");
