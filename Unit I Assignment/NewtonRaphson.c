@@ -26,16 +26,15 @@ void main()
 			   exit(0);
 		  }
 
-		
 		  x1 = x0 - f0/df0;
 		  err = fabs((x1-x0)/x1);
 
-		
 		  printf("%d\t\t%f\t%f\t%f\t%f\t%f\n", step, x0, f0, df0, x1, err);
 		  x0 = x1;
 		  step = step + 1;
 		 
-	 }while(fabs(err) > tol_err);
+	 }
+	 while(fabs(err) > tol_err);
 	
 	 printf("\nRoot is: %f", x1);
 	 getch();
