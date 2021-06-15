@@ -8,7 +8,7 @@ int main()
     float xa = 0;
     float xb = 1;
     float xm;
-    float epsilon = 0.0001;
+    float epsilon = 0.05;
     float counter = 0;
     float err;
     int itr = 1;
@@ -43,7 +43,7 @@ int main()
           counter++; 
           itr = itr + 1;
     }
-    while(counter<20.0 && fabs(err) > epsilon) ;
+    while(counter<20.0 && fabs(err)>epsilon) ;
     printf("\nNumber of iterations done: %.0f\n", counter);
     printf("The root is: %f\n", xm);
     printf("\n\n");
@@ -53,8 +53,8 @@ float f(float x) {
        float val;
        // val = 2*pow(x,3)-5;
        // val = sin(x)+5*x-3;
-       // val = exp((-x))-5;
-       //val= 2.303*log10(x) + 6*x - 5;
+       //val = exp((-x))-5;
+       val= 2.303*log10(x) + 6*x - 5;
        return val;
 }
 
