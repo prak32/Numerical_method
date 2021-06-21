@@ -27,7 +27,7 @@ void main(){
     printf("\n\niter\tx1\t\tf(x1)\t\tx2\t\tf(x2)\t\tx3\t\terror\n");
     printf("________________________________________________________________________________________________\n");
     do{
-        x3=(x1*f(x2)-x2*f(x1))/(f(x2)-f(x1));
+        x3=x2-((x2-x1)*f(x2))/(f(x2)-f(x1));
         err = fabs((x3-x2)/x3);
         printf("%d.\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n",iter,x1,f(x1),x2,f(x2),x3,err);
         x1=x2;
